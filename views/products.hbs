@@ -1,0 +1,38 @@
+<section>
+<div class="container-fluid m-2 ">
+    <div class="row ">
+      
+        {{#each pro}}
+
+        <div class="col-12 col-sm-8 col-md-6 col-lg-3 p-1">
+            <div class="card" style="width: 300px; height:auto;">
+                <img class="card-img" src="/images/{{this.pimage}}" alt="pimage">
+                
+                <div class="card-body">
+                    <h4 class="card-title">{{this.pname}}</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">{{this.pcat}}</h6>
+                    <p class="card-text">
+                        {{this.pdis}}</p>
+
+                    <div class="buy d-flex justify-content-between align-items-center">
+                        <div class="price text-success">
+                            <h5 class="mt-4">RS: {{this.pprice}}</h5>
+                        </div>
+                        <div> <a class="btn btn-primary" href="/bid/{{this._id}}" role="button">Bid Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        {{/each}}
+
+    
+
+
+    </div>
+</div>
+
+</section>

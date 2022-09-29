@@ -1,0 +1,35 @@
+<div class="container p-3">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Image</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {{#each pro}}
+            <tr>
+                <th scope="row">{{@index}}</th>
+                <td>{{this.pname}}</td>
+                <td>{{this.pcat}}</td>
+                <td style="max-width: 150px;">{{this.pdis}}</td>
+                <td>{{this.pprice}}</td>
+                <td><img class="card-img" style="width: 60px ;"
+                        src="/images/{{this.pimage}}">
+                </td>
+                <td> <a class="btn btn-primary" href="/products/admin/edit/{{this._id}}" role="button">Edit</a>
+                    <a class="btn btn-primary" href="/products/admin/delete/{{this._id}}" role="button">Delete</a>
+                </td>
+            </tr>
+              {{/each}}
+         
+
+        </tbody>
+    </table>
+    <a class="btn btn-primary btn-lg" href="/products/admin/addproducts" role="button">Add Product</a>
+</div>
